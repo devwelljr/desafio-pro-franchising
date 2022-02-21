@@ -1,4 +1,5 @@
-const create = require('./create');
-const insertImage = require('./insertImage');
+const create = require("./create");
+const getAll = require("./getAll");
+const insertImage = require("./insertImage");
 
-module.exports = { create, insertImage };
+module.exports = { create, getAll, insertImage };
