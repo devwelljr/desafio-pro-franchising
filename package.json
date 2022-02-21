@@ -1,0 +1,25 @@
+{
+  "name": "desafio-pro-franchising",
+  "version": "1.0.0",
+  "description": "Teste técnico para desenvolvedor backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ./src/api/server.js"
+  },
+  "keywords": [],
+  "author": "Wellington Gregorio",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.4.0",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0"
+  }
+}
