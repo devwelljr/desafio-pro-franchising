@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use(cors());
 
-app.use('/uploads', express.static(path.join(__dirname, '..', '..', 'public', 'uploads')));
+app.use('/images', express.static(path.resolve(__dirname, "../../public/uploads")));
 
 /* Rotas usando router para cada rota principal */
 app.use('/users', usersRouter);
