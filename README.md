@@ -81,3 +81,10 @@ Para atualizar o produto e nescessario o `token JWT` no `header` com um campo ch
 
 Exemplo:
 ![updateProduct](./src/images/updateProduct.png)
+
+### Relatorio do custo dos ingredientes dos produtos(GET): http://localhost:3001/products/report
+
+Para acessar o relatorio de gastos com ingredientes e nescessario o `token JWT` no `header` com um campo chamado `authorization`,.
+
+Exemplo:
+![report](./src/images/report.png)

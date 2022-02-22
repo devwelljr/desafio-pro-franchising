@@ -4,6 +4,7 @@ const {
   create,
   myProducts,
   edit,
+  relatorio,
   deleteProduct,
   insertImage,
 } = require("../controllers/products/index.js");
@@ -19,6 +20,8 @@ router.put("/:id/image", validationJWT, upload, fileFilter, insertImage);
 router.put("/edit/:id", validationJWT, edit);
 
 router.post("/new", validationJWT, createValidation, create);
+
+router.get("/report", validationJWT, relatorio);
 
 router.get("/myProducts", validationJWT, myProducts);
 
