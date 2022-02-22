@@ -1,6 +1,7 @@
 const connection = require("../connection");
 const { ObjectId } = require("mongodb");
 
+/* Busca todos produtos do dono no banco de dados */
 module.exports = async (_id) => {
   const db = await connection();
 
@@ -14,6 +15,7 @@ module.exports = async (_id) => {
         price: 1,
         quantity: 1,
         ingredients: 1,
+        userId: 0,
         image: 0,
       }
     )

@@ -2,7 +2,7 @@
 
 ## Sobre o projeto
 
-Desafio Técnico para processo seletivo, este projeto consiste na implementação de um um sistema de controle de estoque com um login, CRUD de produtos.
+Desafio Técnico para processo seletivo, este projeto consiste na implementação de um sistema de controle de estoque com um login, CRUD de produtos.
 
 Onde feito o login e gerado um token para a autenticação do usuário, pois apenas o próprio usuário pode ver, criar, atualizar e deletar seus produtos em estoque.
 
@@ -24,13 +24,13 @@ Este projeto Utiliza o banco de dados MongoDB, para o funcionamento é necessár
 
 ## Instalação
 
--Clone o repositório através da seguinte chave https: `https://github.com/devwelljr/desafio-pro-franchising.git`
+— Clone o repositório através da seguinte chave https: `https://github.com/devwelljr/desafio-pro-franchising.git`
 
--Instale as dependências, entrando na raiz dando `npm install`.
+— Instale as dependências, entrando na raiz dando `npm install`.
 
--Crie um arquivo de variáveis de ambiente na raiz, `.env` seguindo o arquivo `.env.example` como exemplo.
+— Crie um arquivo de variáveis de ambiente na raiz, `.env` seguindo o arquivo `.env.example` como exemplo.
 
--Para rodar a aplicação de `npm start` ou `npm run dev` na raiz.
+— Para rodar a aplicação de `npm start` ou `npm run dev` na raiz.
 
 ## Como utilizar
 
@@ -41,50 +41,50 @@ A aplicação começa com o cliente tendo que fazer login ou se cadastrar, onde 
 ### Cadastro(POST): http://localhost:3001/users/register
 
 No cadastro para se criar uma conta o usuário precisa cadastrar seu `usuário` com no mínimo 4 carácteres, sua `senha` com no mínimo 6 carácteres e um `email` válido.
-PS: O `email` é unico no sistema, não sendo possível ter dois usuários com o mesmo email.
+PS: O `email` é único no sistema, não sendo possível ter dois usuários com o mesmo email.
 
 ### Cadastro de produto(POST): http://localhost:3001/products/new
 
-Apos o login, um `token JWT` e retornado, para inserir novos produtos e obrigatorio esta logado, passando no `header` um campo chamado `authorization` com o token.
+Apos o login, um `token JWT` e retornado, para inserir novos produtos e obrigatório está logado, passando no `header` um campo chamado `authorization` com o token.
 
 ![authorization](./src/images/authorization.png)
 
-Um novo produto deve ser passado como objeto pro body da requisicao, onde deve-se obrigatoriamente colocar os seguintes chaves e valores:
+Um novo produto deve ser passado como objeto pro body da requisição, onde se deve obrigatoriamente colocar os seguintes chaves e valores:
 
 Exemplo:
 ![newProduct](./src/images/newProduct.png)
 
 ### Inserir imagem no produto(PUT): http://localhost:3001/products/:id/image
 
-Para inserir a imagem no produto ela deve ser nos formatos `PNG/JPG` no field `image`, junto com o ID do produto passado na URL.
+Para inserir a imagem no produto ela deve ser nos formatos `PNG/JPG` no field `image`, com o ID do produto passado na URL.
 
 Exemplo:
 ![imgProduct](./src/images/newImg.png)
 
-### Visualizar todos produtos(GET): http://localhost:3001/products/myProducts
+### Visualizar todos os produtos(GET): http://localhost:3001/products/myProducts
 
-Para visualizar todos os produtos e nescessario o `token JWT` no `header` com um campo chamado `authorization`.
+Para visualizar todos os produtos e necessário o `token JWT` no `header` com um campo chamado `authorization`.
 
 Exemplo:
 ![allProducts](./src/images/allProducts.png)
 
 ### Deletar um produto(DELETE): http://localhost:3001/products/deleteProduct/:id
 
-Para deletar o produto e nescessario o `token JWT` no `header` com um campo chamado `authorization` e o ID do produto na url.
+Para deletar o produto e necessário o `token JWT` no `header` com um campo chamado `authorization` e o ID do produto na URL.
 
 Exemplo:
 ![deleteProduct](./src/images/deleteProduct.png)
 
 ### Atualizar um produto(PUT): http://localhost:3001/products/edit/:id
 
-Para atualizar o produto e nescessario o `token JWT` no `header` com um campo chamado `authorization`, o ID do produto na url e o body com os campos e valores do que deseja alterar.
+Para atualizar o produto e necessário o `token JWT` no `header` com um campo chamado `authorization`, o ID do produto na URL e o body com os campos e valores do que deseja alterar.
 
 Exemplo:
 ![updateProduct](./src/images/updateProduct.png)
 
-### Relatorio do custo dos ingredientes dos produtos(GET): http://localhost:3001/products/report
+### Relatório do custo dos ingredientes dos produtos(GET): http://localhost:3001/products/report
 
-Para acessar o relatorio de gastos com ingredientes e nescessario o `token JWT` no `header` com um campo chamado `authorization`,.
+Para acessar o relatório de gastos com ingredientes e necessário o `token JWT` no `header` com um campo chamado `authorization`, ele ira retornar o custo de cada ingrediente dos produtos do dono.
 
 Exemplo:
 ![report](./src/images/report.png)

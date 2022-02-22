@@ -18,13 +18,20 @@ module.exports = async (token) => {
 
     const response = allProducts.map((product) => {
       let totalGasto = {};
+      let total = 0;
+
       totalGasto = product.ingredients.map(({ name, price, quantity }) => {
         let total = price * quantity;
         return { custo: `O ingrediente ${name} gasta no total R$${total}` };
       });
 
+      totalGasto.map((gasto) => {
+        const div = Number(gasto.custo.split('$')[1]);
+        total += div;
+      })
+
       const { name, price, quantity } = product;
-      product = { name, price, quantity, totalGasto };
+      product = { name, price, quantity, totalGasto, totalGastoDoProduto: `R$${total}` };
       return product;
     });
 
