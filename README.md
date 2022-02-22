@@ -30,7 +30,7 @@ Este projeto Utiliza o banco de dados MongoDB, para o funcionamento é necessár
 
 — Crie um arquivo de variáveis de ambiente na raiz, `.env` seguindo o arquivo `.env.example` como exemplo.
 
-— Para rodar a aplicação de `npm start` ou `npm run dev` na raiz.
+— Para rodar a aplicação de `npm run dev` na raiz.
 
 ## Como utilizar
 
