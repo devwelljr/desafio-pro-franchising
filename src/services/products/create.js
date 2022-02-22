@@ -7,7 +7,6 @@ module.exports = async ({
   price,
   quantity,
   ingredients,
-  unity,
   email,
 }) => {
   const db = await connection();
@@ -18,7 +17,6 @@ module.exports = async ({
     price,
     quantity,
     ingredients,
-    unity,
     userId: _id,
   });
 

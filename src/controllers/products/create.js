@@ -7,7 +7,7 @@ const { CREATED } = require('http-status-codes').StatusCodes;
 
 /* Controller responsável pela criação de novo produto */
 module.exports = rescue(async (req, res) => {
-  const { name, price, quantity, ingredients, unity } = req.body;
+  const { name, price, quantity, ingredients } = req.body;
   const token = req.headers.authorization;
 
   const secret = process.env.SECRET ? process.env.SECRET : "segredo";
@@ -18,7 +18,6 @@ module.exports = rescue(async (req, res) => {
     price,
     quantity,
     ingredients,
-    unity,
     email,
   });
 

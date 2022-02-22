@@ -6,14 +6,13 @@ module.exports = async ({
   price,
   quantity,
   ingredients,
-  unity,
   userId,
 }) => {
   const db = await connection();
 
   const { insertedId } = await db
     .collection("products")
-    .insertOne({ name, price, quantity, ingredients, unity, userId });
+    .insertOne({ name, price, quantity, ingredients, userId });
 
   const newRecipe = {
     _id: insertedId,
@@ -21,7 +20,6 @@ module.exports = async ({
     price,
     quantity,
     ingredients,
-    unity,
     userId,
   };
 
