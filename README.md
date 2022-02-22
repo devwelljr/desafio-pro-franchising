@@ -64,3 +64,10 @@ Para visualizar todos os produtos e nescessario o `token JWT` no `header` com um
 
 Exemplo:
 ![allProducts](./src/images/allProducts.png)
+
+### Deletar um produto(DELETE): http://localhost:3001/products/deleteProduct/:id
+
+Para deletar o produto e nescessario o `token JWT` no `header` com um campo chamado `authorization` e o ID do produto na url.
+
+Exemplo:
+![deleteProduct](./src/images/deleteProduct.png)
