@@ -6,6 +6,8 @@ Desafio Técnico para processo seletivo, este projeto consiste na implementaçã
 
 Onde feito o login e gerado um token para a autenticação do usuário, pois apenas o próprio usuário pode ver, criar, atualizar e deletar seus produtos em estoque.
 
+No desenvolvimento foi usado a arquitetura MSC e REST.
+
 ## Tecnologias Utilizadas
 
 #### :link: [Node.js](https://nodejs.org/en/)
@@ -14,6 +16,7 @@ Onde feito o login e gerado um token para a autenticação do usuário, pois ape
 #### :link: [JsonWebToken](https://jwt.io/introduction)
 #### :link: [Joi](https://joi.dev/api/?v=17.5.0)
 #### :link: [ESLint](https://eslint.org/)
+#### :link: [Multer](https://www.npmjs.com/package/multer)
 
 ## Pré-Requisitos
 
@@ -71,3 +74,10 @@ Para deletar o produto e nescessario o `token JWT` no `header` com um campo cham
 
 Exemplo:
 ![deleteProduct](./src/images/deleteProduct.png)
+
+### Atualizar um produto(PUT): http://localhost:3001/products/edit/:id
+
+Para atualizar o produto e nescessario o `token JWT` no `header` com um campo chamado `authorization`, o ID do produto na url e o body com os campos e valores do que deseja alterar.
+
+Exemplo:
+![updateProduct](./src/images/updateProduct.png)
